@@ -45,7 +45,7 @@ void addNode(){
         current = current->next;
     }
     nodeBaru->next = current;
-    previous->next + nodeBaru;
+    previous->next = nodeBaru;
 }
 
 bool serachNode(int nim, Node* current, Node* previous) {
@@ -61,7 +61,7 @@ bool serachNode(int nim, Node* current, Node* previous) {
     {
         return false;
     }
-    else id (current->noMHS == nim)
+    else if (current->noMHS == nim)
     {
         return true;
     }
