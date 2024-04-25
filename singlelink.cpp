@@ -96,4 +96,11 @@ void traverse() {
         system("cls");
         return;
     }
+    else {
+        Node* currentNode = START;
+        while (currentNode != NULL) {
+            cout << "NIM:" << currentNode->noMHS << ", Nama: " << currentNode->name << endl;
+            currentNode = currentNode->next;
+        }
+    }
 }
