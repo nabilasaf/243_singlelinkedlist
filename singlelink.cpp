@@ -34,7 +34,7 @@ void addNode(){
     Node* previous = START;
     Node* current = START;
 
-    while ((curret != NULL) && (nim >= current ->noMHS))
+    while ((current != NULL) && (nim >= current ->noMHS))
     {
         if (nim == current->noMHS)
         {
@@ -69,4 +69,15 @@ bool serachNode(int nim, Node* current, Node* previous) {
     {
         return false;
     }
+}
+
+bool deletNode(int nim){
+    Node* current = START;
+    Node* previous = START;
+    if (serachNode(nim, previous, current) == false)
+    return false;
+    previous->next = current->next;
+    if (current == START)
+    START = current->next;
+    return true;
 }
